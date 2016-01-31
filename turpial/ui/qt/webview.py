@@ -134,7 +134,7 @@ class StatusesWebView(QWebView):
                     if url.url.find('instagram') < 0:
                         media.append(url.url)
 
-                if status.is_quote_status:
+                if status.is_quote_status and status.quoted_status:
                     quote_username = status.quoted_status.username
                     quote_message = status.quoted_status.text
 
